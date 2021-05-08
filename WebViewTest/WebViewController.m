@@ -5,19 +5,19 @@
 //  Created by Marshal on 2021/4/29.
 //
 
-#import "ViewController.h"
+#import "WebViewController.h"
 #import "TestWKWebViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <WebViewJavascriptBridge.h>
 
-@interface ViewController ()<UIWebViewDelegate>
+@interface WebViewController ()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) WebViewJavascriptBridge *wjb;
 
 @end
 
-@implementation ViewController
+@implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

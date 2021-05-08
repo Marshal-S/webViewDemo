@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0579F5A08F94526D095704F3 /* libPods-WebViewTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBA7EC7FA93C144E01F4101 /* libPods-WebViewTest.a */; };
 		663A67E5263A9026005D9026 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 663A67E4263A9026005D9026 /* AppDelegate.m */; };
-		663A67EB263A9026005D9026 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 663A67EA263A9026005D9026 /* ViewController.m */; };
+		663A67EB263A9026005D9026 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 663A67EA263A9026005D9026 /* WebViewController.m */; };
 		663A67EE263A9026005D9026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663A67EC263A9026005D9026 /* Main.storyboard */; };
 		663A67F0263A9029005D9026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663A67EF263A9029005D9026 /* Assets.xcassets */; };
 		663A67F3263A9029005D9026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663A67F1263A9029005D9026 /* LaunchScreen.storyboard */; };
@@ -43,8 +43,8 @@
 		663A67E0263A9026005D9026 /* WebViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663A67E3263A9026005D9026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		663A67E4263A9026005D9026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		663A67E9263A9026005D9026 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		663A67EA263A9026005D9026 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		663A67E9263A9026005D9026 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		663A67EA263A9026005D9026 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		663A67ED263A9026005D9026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		663A67EF263A9029005D9026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		663A67F2263A9029005D9026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 				663A6821263A9EE8005D9026 /* index.html */,
 				663A67E3263A9026005D9026 /* AppDelegate.h */,
 				663A67E4263A9026005D9026 /* AppDelegate.m */,
-				663A67E9263A9026005D9026 /* ViewController.h */,
-				663A67EA263A9026005D9026 /* ViewController.m */,
+				663A67E9263A9026005D9026 /* WebViewController.h */,
+				663A67EA263A9026005D9026 /* WebViewController.m */,
 				6691B970264394B3006BEFCE /* TestWKWebViewController.h */,
 				6691B971264394B3006BEFCE /* TestWKWebViewController.m */,
 				6657D9BD2646809100732DA6 /* CommontWebViewController.h */,
@@ -325,7 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				663A67EB263A9026005D9026 /* ViewController.m in Sources */,
+				663A67EB263A9026005D9026 /* WebViewController.m in Sources */,
 				663A67E5263A9026005D9026 /* AppDelegate.m in Sources */,
 				663A67F6263A9029005D9026 /* main.m in Sources */,
 				6691B972264394B3006BEFCE /* TestWKWebViewController.m in Sources */,

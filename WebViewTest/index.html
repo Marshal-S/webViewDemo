@@ -20,40 +20,6 @@
             //通过handle往oc中发送消息,OCHandleMessage是设置的handle名字
             window.webkit.messageHandlers.OCHandleMessage.postMessage("messageHandle消息");
         }
-        
-        //互相调用要加入这个方法
-        function setupWebViewJavascriptBridge(callback) {
-            if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
-            if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
-            window.WVJBCallbacks = [callback];
-            var WVJBIframe = document.createElement('iframe');
-            WVJBIframe.style.display = 'none';
-            WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
-            document.documentElement.appendChild(WVJBIframe);
-            setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
-        }
-        
-        setupWebViewJavascriptBridge(function(bridge) {
-            // 注册JS被调用的handle，用于oc调用
-            bridge.registerHandler('OCCallJS', function(data, responseCallback) {
-                alert('OCCallJS方法被调用:'+data);
-                responseCallback('js执行过了');
-            })
-            bridge.registerHandler('OCCallJS1', function(data, responseCallback) {
-                alert('OCCallJS1方法被调用:'+data);
-                responseCallback('js执行过了');
-            })
-        })
-        
-        function callOCMethod(){
-            //oc调用js中注册的handle，可以传递接收参数
-            WebViewJavascriptBridge.callHandler('jsCallsOC', @"测试数据哈", function(response) {
-                 alert(response);
-            })
-            WebViewJavascriptBridge.callHandler('jsCallsOC1', @"测试数据哈", function(response) {
-                 alert(response);
-            })
-        }
     </script>
 </head>
 <body>

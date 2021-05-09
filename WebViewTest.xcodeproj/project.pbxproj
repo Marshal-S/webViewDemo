@@ -19,6 +19,7 @@
 		663A6822263A9EE8005D9026 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 663A6821263A9EE8005D9026 /* index.html */; };
 		6657D9BF2646809100732DA6 /* CommontWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6657D9BE2646809100732DA6 /* CommontWebViewController.m */; };
 		6691B972264394B3006BEFCE /* TestWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6691B971264394B3006BEFCE /* TestWKWebViewController.m */; };
+		82916C912647ECEB002EEEC4 /* index1.html in Resources */ = {isa = PBXBuildFile; fileRef = 82916C902647ECEB002EEEC4 /* index1.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		6657D9BE2646809100732DA6 /* CommontWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommontWebViewController.m; sourceTree = "<group>"; };
 		6691B970264394B3006BEFCE /* TestWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWKWebViewController.h; sourceTree = "<group>"; };
 		6691B971264394B3006BEFCE /* TestWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWKWebViewController.m; sourceTree = "<group>"; };
+		82916C902647ECEB002EEEC4 /* index1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index1.html; sourceTree = "<group>"; };
 		8EBA7EC7FA93C144E01F4101 /* libPods-WebViewTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebViewTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58B3AA40A8455FB22E6A62 /* Pods-WebViewTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewTest.debug.xcconfig"; path = "Target Support Files/Pods-WebViewTest/Pods-WebViewTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				663A6821263A9EE8005D9026 /* index.html */,
+				82916C902647ECEB002EEEC4 /* index1.html */,
 				663A67E3263A9026005D9026 /* AppDelegate.h */,
 				663A67E4263A9026005D9026 /* AppDelegate.m */,
 				663A67E9263A9026005D9026 /* WebViewController.h */,
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				663A67F3263A9029005D9026 /* LaunchScreen.storyboard in Resources */,
+				82916C912647ECEB002EEEC4 /* index1.html in Resources */,
 				663A6822263A9EE8005D9026 /* index.html in Resources */,
 				663A67F0263A9029005D9026 /* Assets.xcassets in Resources */,
 				663A67EE263A9026005D9026 /* Main.storyboard in Resources */,

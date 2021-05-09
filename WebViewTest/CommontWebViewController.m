@@ -38,7 +38,7 @@
 - (void)initUIWebView {
     self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index.html" withExtension:nil];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index1.html" withExtension:nil];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     
     self.webView.delegate = self;
@@ -57,7 +57,7 @@
     _wkWebView.UIDelegate = self;
     _wkWebView.navigationDelegate = self;
     _wkWebView.allowsBackForwardNavigationGestures = YES;
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index.html" withExtension:nil];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index1.html" withExtension:nil];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
     [_wkWebView loadRequest:request];
     

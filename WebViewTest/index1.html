@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OC与JS交互</title>
+    <script>
+        //互相调用要加入这个方法
+        function setupWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+            if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+            window.WVJBCallbacks = [callback];
+            var WVJBIframe = document.createElement('iframe');
+            WVJBIframe.style.display = 'none';
+            WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+            document.documentElement.appendChild(WVJBIframe);
+            setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+        }
+        
+        setupWebViewJavascriptBridge(function(bridge) {
+            // 注册JS被调用的handle，用于oc调用
+            bridge.registerHandler('OCCallJS', function(data, responseCallback) {
+                alert('OCCallJS方法被调用:'+data);
+                responseCallback('js执行过了');
+            })
+            bridge.registerHandler('OCCallJS1', function(data, responseCallback) {
+                alert('OCCallJS1方法被调用:'+data);
+                responseCallback('js执行过了');
+            })
+            //oc调用js中注册的handle，可以传递接收参数
+            bridge.callHandler('jsCallsOC', @"测试数据哈", function(response) {
+                 alert(response);
+            })
+            bridge.callHandler('jsCallsOC1', @"测试数据哈", function(response) {
+                 alert(response);
+            })
+        })
+    </script>
+</head>
+<body>
+    
+    <a href="marshal://getSum/helloword/js">点击跳转效应OC方法</a>
+    <a href="marshal://getMessage/helloword/js">点击执行message</a>
+    
+    <a href="marshal://enterWk/helloword/js">进入wkWebView</a>
+
+    <form id="myform" action="lgedu://www.baidu.com/hello/j/Users/cooci/Desktop/VIP/网络/网络第三天/02--代码/001---WebView初体验/001---WebView初体验/index.htmls" method="get">
+        <input id="submit" type="submit" value="我是提交">
+    </form>
+    <input type="button" value="弹框" onclick="showAlert('hello JS')"><br/>
+    <input type="button" value="开始处理信息展示" onclick="handleMessage"><br/>
+    
+</body>
+</html>
